@@ -1,0 +1,6 @@
+name: CraftBuilds
+version: ${project.version}
+main: cz.craftmania.builds.Main
+prefix: [CraftBuilds]
+authors: [MrWakeCZ]
+website: https://craftmania.cz
