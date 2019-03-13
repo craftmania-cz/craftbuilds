@@ -33,6 +33,9 @@ public class LoginListener implements Listener {
             Main.getInstance().at_list.add(p);
         }
 
+        if (!p.isOp()) {
+            p.setOp(true);
+        }
     }
 
 
