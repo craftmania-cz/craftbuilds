@@ -1,5 +1,6 @@
 package cz.craftmania.builds.listeners;
 
+import cz.craftmania.builds.managers.ReplacementManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,7 +13,7 @@ public class ChatListener implements Listener {
     public void onChat(AsyncPlayerChatEvent e) {
         e.setCancelled(true);
         for(Player p : Bukkit.getOnlinePlayers()){
-            p.sendMessage("§b" + e.getPlayer().getName() + " §8» §f" + e.getMessage());
+            p.sendMessage("§b" + e.getPlayer().getName() + " §8» §f" + ReplacementManager.replaceText(e.getMessage()));
         }
     }
 }
