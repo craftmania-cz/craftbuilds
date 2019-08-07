@@ -1,5 +1,6 @@
 package cz.craftmania.builds;
 
+import cz.craftmania.builds.listeners.BlockListener;
 import cz.craftmania.builds.listeners.ChatListener;
 import cz.craftmania.builds.listeners.LoginListener;
 import cz.craftmania.builds.sql.SQLManager;
@@ -59,6 +60,7 @@ public final class Main extends JavaPlugin {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(new LoginListener(), this);
         pm.registerEvents(new ChatListener(), this);
+        pm.registerEvents(new BlockListener(), this);
     }
 
     private void loadCommands() {
