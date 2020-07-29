@@ -1,6 +1,7 @@
 package cz.craftmania.builds.listeners;
 
 import cz.craftmania.builds.Main;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -36,6 +37,8 @@ public class LoginListener implements Listener {
         if (!p.isOp()) {
             p.setOp(true);
         }
+
+        p.setGameMode(GameMode.CREATIVE);
     }
 
 

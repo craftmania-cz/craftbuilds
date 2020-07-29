@@ -3,6 +3,7 @@ package cz.craftmania.builds;
 import cz.craftmania.builds.listeners.BlockListener;
 import cz.craftmania.builds.listeners.ChatListener;
 import cz.craftmania.builds.listeners.LoginListener;
+import cz.craftmania.builds.listeners.WorldChangeListener;
 import cz.craftmania.builds.sql.SQLManager;
 import cz.craftmania.builds.tasks.ATCheckerTask;
 import org.bukkit.entity.Player;
@@ -61,6 +62,7 @@ public final class Main extends JavaPlugin {
         pm.registerEvents(new LoginListener(), this);
         pm.registerEvents(new ChatListener(), this);
         pm.registerEvents(new BlockListener(), this);
+        pm.registerEvents(new WorldChangeListener(), this);
     }
 
     private void loadCommands() {
